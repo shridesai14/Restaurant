@@ -1,0 +1,92 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Restaurant App</h2>
+        <div class="d-flex">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Restaurants</button>
+        </div>
+    </div>
+</nav>
+<!-- Jumbotron -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Restaurant Records management</h1>
+        <p class="col-md-8 fs-4">save records using Angular 12</p>
+        <a class="btn btn-primary btn-lg" target="_blank" type="button" href="https://angular.io/">Done</a>
+</div>
+</div>
+
+    
+
+<!-- table -->
+<Table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Restaurant Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Service</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of allRestaurantData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.services}}</td>
+            <td>
+                <button class="btn btn-info" (click)="onEditResto(data)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                <button (click)="deleteResto(data)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</Table>
+
+<!-- modal -->
+
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formvalue">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input type="text" formControlName="name" class="form-control" placeholder="Restaurant name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Email</label>
+                  <input type="text" formControlName="email" class="form-control" placeholder="Restaurant email" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Mobile no</label>
+                    <input type="text" formControlName="mobile" class="form-control" placeholder="Contact number" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Address</label>
+                    <input type="text" formControlName="address" class="form-control" placeholder="Address" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Services</label>
+                    <input type="text" formControlName="services" class="form-control" placeholder="Services" id="exampleInputPassword1">
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" (click)="addResto()" class="btn btn-primary">Add details</button>
+          <button type="button" (click)="updateResto()" class="btn btn-primary">Update details</button>
+        </div>
+      </div>
+    </div>
+  </div>

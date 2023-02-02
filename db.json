@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "name": "vidyarthi Bhavan",
+      "email": "Vb@gmail.com",
+      "mobile": "7897654321",
+      "address": "Basavangudi",
+      "services": "Dose"
+    },
+    {
+      "id": 4,
+      "name": "CafeAmudham",
+      "email": "CA@gmail.com",
+      "mobile": "7896543212",
+      "address": "Jayanagar",
+      "services": "all services available"
+    },
+    {
+      "id": 6,
+      "name": "RameshwaramCafe",
+      "email": "Rameshwaram@gmail.com",
+      "mobile": "8907654321",
+      "address": "Jp nagar",
+      "services": "All services"
+    },
+    {
+      "id": 7,
+      "name": "CTR",
+      "email": "ctr@gmail.com",
+      "mobile": "8907654321",
+      "address": "Malleshwaram",
+      "services": "South Indian"
+    },
+    {
+      "id": 8,
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "mobile": "7898765421",
+      "address": "abvcddrt",
+      "services": "Nothing"
+    },
+    {
+      "id": 9,
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "mobile": "7898765421",
+      "address": "abvcddrt",
+      "services": "Something"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
